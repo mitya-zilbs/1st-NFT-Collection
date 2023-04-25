@@ -7,5 +7,6 @@ This NFT collection is an example built out from a lesson by LearnWeb3 DAO, depl
 This dApp is a simple React app that mints 20 Crypto Dev NFTs, launches a presale, and then transitions to a public sale once the presale ends. 
 It uses the whitelist contract as a means of determining who is on the whitelist and eligible for the presale, and the CryptoDevs contract for minting the NFTS.
 The owner of the deployed contracts is able to start the presale, which lasts 5 minutes before it transitions to a public sale. 
-Each NFT costs .01 ETH, and 20 are minted when the CryptoDevs contract is deployed. Reference deploymentTips.txt on how to deploy the site.
+Each NFT costs .01 ETH, and 20 are minted when the CryptoDevs contract is deployed. 
 </p>
+<b><i>Reference deploymentTips.txt on how to deploy the site.</i></b>
