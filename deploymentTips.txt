@@ -1,0 +1,43 @@
+Prereq: deploy whitelist contract
+- whitelist.sol contract is copied into folder, deploy.js only deploys CryptoDevs contract
+- current whitelist contract: 0xc642b17F5571d8cC1678EfEf47cf03ada75957B8
+
+npm init --yes
+npm install --save-dev hardhat
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+npm install @openzeppelin/contracts
+npm install dotenv
+
+npm install next
+npm install web3modal
+npm install ethers@5 (Web3Provider doesn't work after v5)
+
+npx hardhat
+
+IWhitelist contract (imports whitelist)
+CryptoDevs contract (NFT deployment)
+    - if imports dont work, change default workspace compiler to localFile
+.env (node URL and private key)
+
+deploy.js (deploys CryptoDevs)
+constants -> index.js (whitelist contract and metadata URL)
+hardhat.config.js (for deployment on network)
+
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network any
+
+(in an internal folder)
+npx create-next-app@latest
+npm run dev (deploys localhost)
+
+Home.module.css (modules might not work correctly so use module)
+index.js (deploys Next app)
+constants -> index.js (CryptoDevs contract and abi)
+    - current CryptoDevs contract: 0x9f71Ed2d5A276FAAdBD4649f33A03445728d5cfa
+    - abi: artifacts/contracts/CryptoDevs.sol/CryptoDevs.json
+
+npm run dev 
+- if deployment issues:
+    - change .eslintrc.json
+        - "extends": ["next/babel","next/core-web-vitals"]
+    - if errno: -4094 happens, delete .next folder and deploy again
