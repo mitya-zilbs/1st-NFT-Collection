@@ -9,15 +9,16 @@ It uses the whitelist contract as a means of determining who is on the whitelist
 The owner of the deployed contracts is able to start the presale, which lasts 5 minutes before it transitions to a public sale. 
 Each NFT costs .01 ETH, and 20 are minted when the CryptoDevs contract is deployed.
 </p>
-<br></br>
 <h3>Deployment Steps</h3>
-Prerequesite: The whitelist contract must be deployed before the cryptoDevs, as index.js file only deploys cryptoDevs contract
-Dependencies: 
-npm init --yes
+<b>Prerequesite:</b> The whitelist contract must be deployed before the cryptoDevs, as index.js file only deploys cryptoDevs contract
+<p>
+  <b>Dependencies:</b> 
+(npm init --yes,
 npm install --save-dev hardhat,
 --save-dev @nomicfoundation/hardhat-toolbox,
 @openzeppelin/contracts,
 dotenv,
 next,
 web3modal,
-ethers@5 (Web3Provider doesn't work after v5),
+ethers@5 (Web3Provider doesn't work after v5))
+</p>
